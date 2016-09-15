@@ -1,0 +1,66 @@
+23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3
+
+ curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3  -w "%{http_code}" -X POST -F "file=@README.md" http://cc3-san01-trials-logger-query-v1.ccosvc.com/logs/Huawei 2>&1
+ 
+ curl -Lsu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3  -w "%{http_code}" -X POST -F "file=@README.md" http://cc3-san01-trials-logger-query-v1.ccosvc.com/logs/Huawei -o text.txt
+ 
+ curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" https://cc3-san02-inf-api-gateway-v4.ccosvc.com/trials/logger/v1/Humax
+ 
+ 
+ HTTP_STATUS=$(curl -w 'RESP_CODE:%{response_code}' -s  -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" 'http://cc3-san01-trials-logger-query-v1.ccosvc.com/logs/Huawei' | grep -o  'RESP_CODE:[1-4][0-9][0-9]')
+ 
+ HTTP_STATUS=$(curl -w '%{response_code}' -s  -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" -k 'https://cc3-san02-inf-api-gateway-v4.ccosvc.com/trials/logger/v1/Humax' | grep -o  '[1-4][0-9][0-9]')
+ 
+ curl -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" -k https://cc3-san02-inf-api-gateway-v4.ccosvc.com/trials/logger/v1/Humax
+ 
+ 
+ exec 3>&1
+ HTTP_STATUS=$(curl -w "%{http_code}" -o > (cat >&3)  -s  -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" -k 'https://cc3-san02-inf-api-gateway-v4.ccosvc.com/trials/logger/v1/Humax' )
+ 
+ 
+ HTTPSTATUS="$(curl -w '%{response_code}' -s  -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@TRIALSAGENT_LOGGING_DIR/$dstfile" -k "$endpoint/$oem" | grep -o  '[1-4][0-9][0-9]')"
+ 
+ 
+HTTP_STATUS=$(curl -w '%{response_code}' -s  -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" -k $endpoint/$oem | grep -o  '[1-4][0-9][0-9]')
+
+
+
+
+
+
+-----------------
+
+1221  curl https://svn.youview.co.uk/CANHUAWEI/bbc_dev/tags/YouView_Partner_Release_YV-MR2.0-C31.19.3-20160901-HUA/Src/
+ 1222  curl -k  https://svn.youview.co.uk/CANHUAWEI/bbc_dev/tags/YouView_Partner_Release_YV-MR2.0-C31.19.3-20160901-HUA/Src/
+ 1637  history | grep curl
+ 1638  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://cc3-san01-trials-logger-query-v1.ccosvc.com/logs/Huawei
+ 1639  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://cc3-pree1-trials-logger-query-v1.ccosvc.com/logs/Huawei
+ 1640  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://cc3-pre01-trials-logger-query-v1.ccosvc.com/logs/Huawei
+ 1814  history | grep curl
+ 1817  curl -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" -k  https://cc3-san02-inf-api-gateway-v4-api.ccosvc.com/trials/logger/v1/Humax
+ 1818  curl -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" https://cc3-san02-inf-api-gateway-v4-api.ccosvc.com/trials/logger/v1/Humax
+ 1819  curl -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" https://cc3-san02-inf-api-gateway-v4.ccosvc.com/trials/logger/v1/Humax
+ 1820  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://cc3-san02-trials-logger-query-v1.ccosvc.com/logs/Huawei
+ 1821  curl -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" -k https://cc3-san02-inf-api-gateway-v4.ccosvc.com/trials/logger/v1/Humax
+ 1824  history | grep curl
+ 1825  history 1000 | grep curl
+ 1826  history 2000 | grep curl
+ 1890  history 2000 | grep curl
+ 1893  history 2000 | grep curl
+ 1894  curl -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" http://cc4-pre01-trials-logger-query-v1.youview.tv/logs/Huawei
+ 1901  history | grep curl
+ 1903  curl -u 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@README.md" -k https://cc3-san02-inf-api-gateway-v4.ccosvc.com/trials/logger/v1/Humax
+ 1906  history | grep curl
+ 1908  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://cc3-pre01-trials-logger-query-v1.ccosvc.com/logs/Huawei
+ 1909  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" -k http://cc3-pre01-trials-logger-query-v1.ccosvc.com/logs/Huawei
+ 1912  history | grep curl
+ 1958  vi 0001-Catch-the-output-from-curl-and-put-that-in-the-log-m.patch 
+ 1975  git commit -m "Catch the output from curl and put that in the log message"
+ 1992  history | grep curl
+ 1994  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://127.0.0.1:8000/logs/Huawei
+ 1995  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://127.0.0.1:8000/logs/Humax
+ 1996  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -F "file=@T4000-H26.10.0-1.xcf" http://localhost:8000/logs/Humax
+ 1997  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -H "content-md5: abc" -F "file=@T4000-H26.10.0-1.xcf" http://localhost:8000/logs/Humax
+ 1998  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -H "Content-MD5: abc" -F "file=@T4000-H26.10.0-1.xcf" http://localhost:8000/logs/Humax
+ 2002  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -H "Content-MD5:$md5" -F "file=@T4000-H26.10.0-1.xcf" http://localhost:8000/logs/Humax
+ 2005  curl -isu 23bf037e-01a1-47bb-abcc-4f5ec9a460a1:e1d4abf0-697c-4dd2-b487-abef960391b3 -X POST -H "Content-MD5:$md5" -F "file=@T4000-H26.10.0-1.xcf" http://localhost:8000/logs/Humax
