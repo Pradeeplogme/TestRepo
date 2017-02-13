@@ -1,2 +1,4 @@
 fixed the broken email address
 revert
+
+added a new footer [issue 53]
